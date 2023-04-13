@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Section = styled.section`
+export const Main = styled.main`
   display: flex;
   flex-direction: column;
   gap: 30px;

@@ -4,36 +4,38 @@ import * as StatsStyled from './Stats.styled';
 
 export const Card = ({ username, tag, location, avatar, stats }) => {
   return (
-    <ProfileStyled.Profile>
-      <ProfileStyled.Description>
-        <ProfileStyled.Avatar
-          src={avatar}
-          alt="User avatar"
-        ></ProfileStyled.Avatar>
-        <ProfileStyled.Content>{username}</ProfileStyled.Content>
-        <ProfileStyled.ContentHeader>@{tag}</ProfileStyled.ContentHeader>
-        <ProfileStyled.ContentLocation>
-          {location}
-        </ProfileStyled.ContentLocation>
-      </ProfileStyled.Description>
+    <section>
+      <ProfileStyled.Profile>
+        <ProfileStyled.Description>
+          <ProfileStyled.Avatar
+            src={avatar}
+            alt="User avatar"
+          ></ProfileStyled.Avatar>
+          <ProfileStyled.Content>{username}</ProfileStyled.Content>
+          <ProfileStyled.ContentHeader>@{tag}</ProfileStyled.ContentHeader>
+          <ProfileStyled.ContentLocation>
+            {location}
+          </ProfileStyled.ContentLocation>
+        </ProfileStyled.Description>
 
-      <StatsStyled.Stats>
-        <StatsStyled.StatsItem>
-          <StatsStyled.StatsLabel>Followers</StatsStyled.StatsLabel>
-          <StatsStyled.StatsQuantity>
-            {stats.followers}
-          </StatsStyled.StatsQuantity>
-        </StatsStyled.StatsItem>
-        <StatsStyled.StatsItem>
-          <StatsStyled.StatsLabel>Views</StatsStyled.StatsLabel>
-          <StatsStyled.StatsQuantity>{stats.views}</StatsStyled.StatsQuantity>
-        </StatsStyled.StatsItem>
-        <StatsStyled.StatsItem>
-          <StatsStyled.StatsLabel>Likes</StatsStyled.StatsLabel>
-          <StatsStyled.StatsQuantity>{stats.likes}</StatsStyled.StatsQuantity>
-        </StatsStyled.StatsItem>
-      </StatsStyled.Stats>
-    </ProfileStyled.Profile>
+        <StatsStyled.Stats>
+          <StatsStyled.StatsItem>
+            <StatsStyled.StatsLabel>Followers</StatsStyled.StatsLabel>
+            <StatsStyled.StatsQuantity>
+              {stats.followers}
+            </StatsStyled.StatsQuantity>
+          </StatsStyled.StatsItem>
+          <StatsStyled.StatsItem>
+            <StatsStyled.StatsLabel>Views</StatsStyled.StatsLabel>
+            <StatsStyled.StatsQuantity>{stats.views}</StatsStyled.StatsQuantity>
+          </StatsStyled.StatsItem>
+          <StatsStyled.StatsItem>
+            <StatsStyled.StatsLabel>Likes</StatsStyled.StatsLabel>
+            <StatsStyled.StatsQuantity>{stats.likes}</StatsStyled.StatsQuantity>
+          </StatsStyled.StatsItem>
+        </StatsStyled.Stats>
+      </ProfileStyled.Profile>
+    </section>
   );
 };
 

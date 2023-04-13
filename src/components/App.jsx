@@ -1,10 +1,12 @@
 import user from './user.json';
-import { Section } from './App.styled';
+import dataStatistics from './data.json';
+import { Main } from './App.styled';
 import { Card } from './ProfilePage/Profile';
+import { Statistics } from './StatisticsPage/Statistics';
 
 export const App = () => {
   return (
-    <Section>
+    <Main>
       <Card
         username={user.username}
         tag={user.tag}
@@ -12,6 +14,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       ></Card>
-    </Section>
+
+      <Statistics title="Upload stats" stats={dataStatistics} />
+    </Main>
   );
 };
