@@ -10,7 +10,12 @@ export const CardFriendList = ({ cards }) => {
             <FriendListStyled.Status
               style={{ backgroundColor: isOnline && 'green' }}
             />
-            <FriendListStyled.Avatar src={avatar} width="50" height="50" />
+            <FriendListStyled.Avatar
+              src={avatar}
+              width="50"
+              height="50"
+              alt="user avatar"
+            />
             <FriendListStyled.Name>{name}</FriendListStyled.Name>
           </FriendListStyled.Item>
         );
